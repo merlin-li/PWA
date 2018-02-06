@@ -1,1 +1,22 @@
-<h3>PWA demo</h3>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PWA demo</title>
+</head>
+<body>
+    <h3>PWA demo</h3>
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/pwa.js', { scope: '/static' })
+            .then(function(registration) {
+                console.log(registration);
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    });
+}
+</script>
+</body>
+</html>

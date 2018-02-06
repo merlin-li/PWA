@@ -8,7 +8,7 @@
 <script type="text/javascript">
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/pwa.js', { scope: '/static' })
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
             .then(function(registration) {
                 console.log(registration);
             })
